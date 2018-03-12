@@ -4,16 +4,16 @@
 #include <iostream>
 #include <cstdlib>
 
-int hash::Hash(string key){
+// int hash::Hash(std::string key){
 
-	//hash table size adjustable to inputted file
+// 	//hash table size adjustable to inputted file
 
-	int hash = 0;
-	int index;
-	
+// 	int hash = 0;
+// 	int index;
 
-	index = key.length();
 
-	return index;
+// 	index = key.length();
 
-}
+// 	return index;
+
+// }

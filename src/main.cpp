@@ -7,8 +7,8 @@
 int main(int argc, char** argv){
 
 	int index;
-	hash hashObj;
-	index = hashObj.Hash("James");
-	
+	my_hash hashObj;
+	index = hashObj.Hash("testing");
+
 	std::cout << "index = " << index << std::endl;
 }

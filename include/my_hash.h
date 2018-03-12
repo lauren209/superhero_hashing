@@ -1,17 +1,19 @@
 
-#include <string>
-#include <iostream>
 
 #ifndef MYHASH_H
 #define MYHASH_H
 
 
-class hash{
+#include <string>
+#include <iostream>
+
+
+class my_hash{
 
 	public:
 		//index of where in hash table we store info associated with key
-		int Hash(string key);
-		
+		int Hash(std::string key);
+
 
 };
 
@@ -29,4 +31,4 @@ class hash{
 
 
 
-#endif  //MYHASH_H
+#endif
