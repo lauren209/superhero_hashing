@@ -1,5 +1,4 @@
 
-
 #ifndef MYHASH_H
 #define MYHASH_H
 
@@ -12,19 +11,12 @@ class my_hash{
 
 	public:
 		//index of where in hash table we store info associated with key
-		int Hash(std::string key);
 
 
+
+  private:
+    std::std::vector<std::std::vector<Superhero>> hash;
 };
-
-
-
-
-
-
-
-
-
 
 
 

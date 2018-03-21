@@ -1,4 +1,7 @@
 
+#indef Superhero
+#define Superhero
+
 #include <string>
 #include <iostream>
 
@@ -9,43 +12,50 @@ class Superhero{
 // std::string alignment,
 
 public:
-  Superhero(int page_id, std::string name, std::string urlslug, std::string id,
-    char eye_color, char hair_color, char sex,
-    std::string gsm, bool alive, int appearances,
-    std::string first_appearance, int year){
-    this-> page_id = page_id;
-    this-> name = name;
-    this-> urlslug = urlslug;
-    this-> id = id;
-    // this-> alignment = alignment;
-    this-> eye_color = eye_color;
-    this-> hair_color = hair_color;
-    this-> sex = sex;
-    this-> gsm = gsm;
-    this-> alive = alive;
-    this-> appearances = appearances;
-    this-> first_appearance = first_appearance;
-    this-> year = year;
-  }
+  Superhero();
+  ~Superhero();
 
-  // boolean insert(const Superhero & s);
+  void Superhero::setPageID(std::string page_id);
+  void Superhero::setName(std::string name);
+  void Superhero::setUrl(std::string urlslug);
+  void Superhero::setID(std::string id);
+  void Superhero::setEyeColor(std::string eye_color);
+  void Superhero::setHairColor(std::string hair_color);
+  void Superhero::setSex(std::string sex);
+  void Superhero::setGSM(std::string gsm);
+  void Superhero::setAlive(std::string alive);
+  void Superhero::setAppearances(std::string appearances);
+  void Superhero::setFirstAppearance(std::string first_appearance);
+  void Superhero::setYear(std::year = year);
 
-  // Superhero & get(const std::string name);
-
+  std::string Superhero::getPageID();
+  std::string Superhero::getName();
+  std::string Superhero::getUrl();
+  std::string Superhero::getID();
+  std::string Superhero::getEyeColor();
+  std::string Superhero::getHairColor();
+  std::string Superhero::getSex();
+  std::string Superhero::getGSM();
+  std::string Superhero::getAlive();
+  std::string Superhero::getAppearances();
+  std::string Superhero::getFirstAppearance();
+  std::string Superhero::getYear();
 
 private:
-  int page_id;
+  std::string page_id;
   std::string name;
   std::string urlslug;
   std::string id;
-  // std::string alignment;
-  char eye_color;
-  char hair_color;
-  char sex;
+  std::string alignment;
+  std::string eye_color;
+  std::string hair_color;
+  std::string sex;
   std::string gsm;
-  bool alive;
-  int appearances;
+  std::string alive;
+  std::string appearances;
   std::string first_appearance;
-  int year;
+  std::string year;
 
 };
+
+#endef Superhero
