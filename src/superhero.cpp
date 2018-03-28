@@ -1,5 +1,5 @@
 
-#include "../include/superhero.h"
+#include "superhero.h"
 #include <string>
 #include <iostream>
 #include <cstdlib>
@@ -7,55 +7,56 @@
 Superhero::Superhero(){
 }
 
-~Superhero::Superhero(){
+void Superhero::setPageID(std::string p){
+  page_id = p;
 }
 
-void Superhero::setPageID(std::string page_id){
-  this->page_id = page_id;
+void Superhero::setName(std::string n){
+  name = n;
 }
 
-void Superhero::setName(std::string name){
-  this->name = name;
+void Superhero::setUrl(std::string url){
+  urlslug = url;
 }
 
-void Superhero::setUrl(std::string urlslug){
-  this->urlslug = urlslug;
+void Superhero::setID(std::string i){
+  id = i;
 }
 
-void Superhero::setID(std::string id){
-  this->id = id;
+void Superhero::setAlignment(std::string al){
+  alignment = al;
 }
 
-void Superhero::setEyeColor(std::string eye_color){
-  this->eye_color = eye_color;
+void Superhero::setEyeColor(std::string e){
+  eye_color = e;
 }
 
-void Superhero::setHairColor(std::string hair_color){
-  this->hair_color = hair_color;
+void Superhero::setHairColor(std::string h){
+  hair_color = h;
 }
 
-void Superhero::setSex(std::string sex){
-  this->sex = sex;
+void Superhero::setSex(std::string s){
+  sex = s;
 }
 
-void Superhero::setGSM(std::string gsm){
-  this->gsm = gsm;
+void Superhero::setGSM(std::string g){
+  gsm = g;
 }
 
-void Superhero::setAlive(std::string alive){
-  this->alive = alive;
+void Superhero::setAlive(std::string a){
+  alive = a;
 }
 
-void Superhero::setAppearances(std::string appearances){
-  this->appearances = appearances;
+void Superhero::setAppearances(std::string app){
+  appearances = app;
 }
 
-void Superhero::setFirstAppearance(std::string first_appearance){
-  this->first_appearance = first_appearance;
+void Superhero::setFirstAppearance(std::string f){
+  first_appearance = f;
 }
 
-void Superhero::setYear(std::year = year){
-  this->year = year;
+void Superhero::setYear(std::string y){
+  year = y;
 }
 
 
@@ -74,6 +75,10 @@ std::string Superhero::getUrl(){
 
 std::string Superhero::getID(){
   return id;
+}
+
+std::string Superhero::getAlignment(){
+  return alignment;
 }
 
 std::string Superhero::getEyeColor(){
@@ -107,6 +112,69 @@ std::string Superhero::getFirstAppearance(){
 std::string Superhero::getYear(){
   return year;
 }
+
+
+
+
+
+
+// class Superhero{
+
+// // std::string alignment,
+
+// public:
+//    Superhero();
+//   ~Superhero();
+
+//   void setPageID(std::string p);
+//   void setName(std::string n);
+//   void setUrl(std::string url);
+//   void setID(std::string i);
+//   void setEyeColor(std::string e);
+//   void setHairColor(std::string h);
+//   void setSex(std::string s);
+//   void setGSM(std::string g);
+//   void setAlive(std::string a);
+//   void setAppearances(std::string app);
+//   void setFirstAppearance(std::string f);
+//   void setYear(std::string y);
+
+
+//   std::string getPageID();
+//   std::string getName();
+//   std::string getUrl();
+//   std::string getID();
+//   std::string getEyeColor();
+//   std::string getHairColor();
+//   std::string getSex();
+//   std::string getGSM();
+//   std::string getAlive();
+//   std::string getAppearances();
+//   std::string getFirstAppearance();
+//   std::string getYear();
+
+// private:
+//   std::string page_id;
+//   std::string name;
+//   std::string urlslug;
+//   std::string id;
+//   std::string alignment;
+//   std::string eye_color;
+//   std::string hair_color;
+//   std::string sex;
+//   std::string gsm;
+//   std::string alive;
+//   std::string appearances;
+//   std::string first_appearance;
+//   std::string year;
+
+
+
+
+
+
+
+
 
 
 

@@ -1,3 +1,3 @@
-build/release/superhero.o: src/superhero.cpp src/../include/superhero.h
+build/release/superhero.o: src/superhero.cpp include/superhero.h
 
-src/../include/superhero.h:
+include/superhero.h:

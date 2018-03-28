@@ -1,45 +1,44 @@
-
-#indef Superhero
-#define Superhero
+#ifndef         __H_SUPERHERO__
+#define         __H_SUPERHERO__
 
 #include <string>
 #include <iostream>
-
-
 
 class Superhero{
 
 // std::string alignment,
 
 public:
-  Superhero();
-  ~Superhero();
+   Superhero();
 
-  void Superhero::setPageID(std::string page_id);
-  void Superhero::setName(std::string name);
-  void Superhero::setUrl(std::string urlslug);
-  void Superhero::setID(std::string id);
-  void Superhero::setEyeColor(std::string eye_color);
-  void Superhero::setHairColor(std::string hair_color);
-  void Superhero::setSex(std::string sex);
-  void Superhero::setGSM(std::string gsm);
-  void Superhero::setAlive(std::string alive);
-  void Superhero::setAppearances(std::string appearances);
-  void Superhero::setFirstAppearance(std::string first_appearance);
-  void Superhero::setYear(std::year = year);
+  void setPageID(std::string p);
+  void setName(std::string n);
+  void setUrl(std::string url);
+  void setID(std::string i);
+  void setAlignment(std::string al);
+  void setEyeColor(std::string e);
+  void setHairColor(std::string h);
+  void setSex(std::string s);
+  void setGSM(std::string g);
+  void setAlive(std::string a);
+  void setAppearances(std::string app);
+  void setFirstAppearance(std::string f);
+  void setYear(std::string y);
 
-  std::string Superhero::getPageID();
-  std::string Superhero::getName();
-  std::string Superhero::getUrl();
-  std::string Superhero::getID();
-  std::string Superhero::getEyeColor();
-  std::string Superhero::getHairColor();
-  std::string Superhero::getSex();
-  std::string Superhero::getGSM();
-  std::string Superhero::getAlive();
-  std::string Superhero::getAppearances();
-  std::string Superhero::getFirstAppearance();
-  std::string Superhero::getYear();
+
+  std::string getPageID();
+  std::string getName();
+  std::string getUrl();
+  std::string getID();
+  std::string getAlignment();
+  std::string getEyeColor();
+  std::string getHairColor();
+  std::string getSex();
+  std::string getGSM();
+  std::string getAlive();
+  std::string getAppearances();
+  std::string getFirstAppearance();
+  std::string getYear();
 
 private:
   std::string page_id;
@@ -56,6 +55,8 @@ private:
   std::string first_appearance;
   std::string year;
 
+
 };
 
-#endef Superhero
+
+#endif

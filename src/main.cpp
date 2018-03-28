@@ -5,14 +5,17 @@
 #include <fstream>
 #include "my_hash.h"
 #include "superhero.h"
+#include "csv.h"
 
 int main(int argc, char** argv){
 
   Superhero hero;
+
   std::string page_id;
   std::string name;
   std::string urlslug;
   std::string id;
+  std::string alignment;
   std::string eye_color;
   std::string hair_color;
   std::string sex;
@@ -22,37 +25,35 @@ int main(int argc, char** argv){
   std::string first_appearance;
   std::string year;
 
+  std::ifstream inFile;
 
+  io::CSVReader<13> in("../marvel-wikia-data.csv");
+  in.read_header(io::ignore_extra_column, "page_id", "name", "urlslug", "ID",
+                                          "ALIGN", "EYE", "HAIR", "SEX", "GSM",
+                                          "ALIVE", "APPEARANCES", "FIRST APPEARANCE",
+                                          "Year" );
+  std::string vendor; int size; double speed;
 
-  ifstream ip("../marvel-wikia-data.csv");
+  while(in.read_row(page_id, name, urlslug, id, alignment, eye_color, hair_color,
+                    sex, gsm, alive, appearances, first_appearance, year)){
+    // do stuff with the data
 
-  while(ip.good()){
-    getline(ip.page_id, ',');
-    getline(ip.name, ',');
-    getline(ip.urlslug, ',');
-    getline(ip.id, ',');
-    getline(ip.eye_color, ',');
-    getline(ip.hair_color, ',');
-    getline(ip.sex, ',');
-    getline(ip.gsm, ',');
-    getline(ip.alive, ',');
-    getline(ip.appearances, ',');
-    getline(ip.first_appearance, ',');
-    getline(ip.year, '\n');
+    hero.setPageID(page_id);
+    hero.setName(name);
+    hero.setUrl(urlslug);
+    hero.setID(id);
+    hero.setAlignment(alignment);
+    hero.setEyeColor(eye_color);
+    hero.setHairColor(hair_color);
+    hero.setSex(sex);
+    hero.setGSM(gsm);
+    hero.setAlive(alive);
+    hero.setAppearances(appearances);
+    hero.setFirstAppearance(first_appearance);
+    hero.setYear(year);
+
   }
 
-  hero.setPageID(page_id);
-  hero.setName(name);
-  hero.setUrl(urlslug);
-  hero.setID(id);
-  hero.setEyeColor(eye_color);
-  hero.setHairColor(hair_color);
-  hero.setSex(sex);
-  hero.setGSM(gsm);
-  hero.setAlive(alive);
-  hero.setAppearances(appearances);
-  hero.setFirstAppearance(first_appearance);
-  hero.setYear(year);
 
 }
 
