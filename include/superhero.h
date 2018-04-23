@@ -6,11 +6,15 @@
 
 class Superhero{
 
-// std::string alignment,
-
 public:
+  /**
+  * base constructor for the superhero
+  */
    Superhero();
 
+/**
+* setters for the super heros
+*/
   void setPageID(std::string p);
   void setName(std::string n);
   void setUrl(std::string url);
@@ -26,8 +30,13 @@ public:
   void setYear(std::string y);
 
 
+
+
+/**
+* getters for the superheros
+*/
   std::string getPageID();
-  std::string getName();
+  std::string getName() const;
   std::string getUrl();
   std::string getID();
   std::string getAlignment();
@@ -41,6 +50,7 @@ public:
   std::string getYear();
 
 private:
+
   std::string page_id;
   std::string name;
   std::string urlslug;

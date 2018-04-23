@@ -10,6 +10,8 @@
 int main(int argc, char** argv){
 
   Superhero hero;
+  my_hash hash;
+  int collisions;
 
   std::string page_id;
   std::string name;
@@ -52,9 +54,13 @@ int main(int argc, char** argv){
     hero.setFirstAppearance(first_appearance);
     hero.setYear(year);
 
+    if(hash.insert(hero) == false){
+      collisions += 1;
+    }
+
   }
-
-
+  std::cout << collisions << std::endl;
+  return collisions;
 }
 
 
